@@ -1,0 +1,29 @@
+Uruchomienie programów polega na użyciu kompilatora as oraz konsolidatora ld. Plik
+z rozszerzeniem .s jest argumentem kompilatora as, a plik z rozszerzeniem .o wynikiem kompilacji.
+Następnie plik z rozszerzeniem .o zostaje argumentem konsolidatora ld. Wynikiem konsolidacji jest
+plik. Cały proces uruchomienia programu wygląda następująco:
+
+as plik.s -o plik.o
+ld plik.o -o plik
+./plik
+
+hello.s  	Program wyświetla napis „Hello”
+hello2.s 	Program wyświetla podany przez użytkownika ciąg znaków.
+hello3.s 	Program zamienia wszystkie litery małe na duże. Zamiana dokonywana jest poprzez użycie funkcji logicznej and i zmianę odpowiedniego bitu na 0.
+cezar.s		Program przetwarza ciąg znaków zamieniając każdą literę na inną według przesunięcia podanego przez
+		użytkownika (0-9). W programie dodatkowo sprawdzane jest czy nie wyszliśmy ponad zakres małych
+		lub dużych liter.
+
+
+
+Kompilacja kodu na maszynie 64-bitowej wymaga użycia opcji --32 kompilatora as oraz -m elf_i386
+linkera ld.
+as --32 -o plik.o plik.s
+ld -m elf_i386 -o plik plik.o
+
+
+zamiana.s 	W programie podajemy liczbę, jako ciąg znaków. Następnie zostaje ona zapisana, jako pojedyncza
+		liczba do rejestru poprzez użyciu algorytmu Hornera. Na końcu dokonujemy wypisania zawartości
+		rejestru dzieląc liczbę przez zadaną podstawę i wypisując reszty z dzielenia.
+silnia.s 	Do wprowadzania i wyświetlania wyniku zostały użyte wcześniej napisane funkcje wpisz i wypisz.
+		Funkcja factorial rekurencyjnie oblicza silnię.
