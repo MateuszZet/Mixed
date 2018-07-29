@@ -1,0 +1,4 @@
+#PBS -l nodes=1:ppn=2
+#PBS -N cnt
+#PBS -j oe
+mpiexec ~/zad2

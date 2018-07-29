@@ -1,0 +1,9 @@
+#PBS -l nodes=1:ppn=4
+#PBS -N cnt
+#PBS -j oe
+mpiexec ~/lab45new 40
+
+
+
+
+
