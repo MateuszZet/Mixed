@@ -2,8 +2,8 @@
  * SO2 Projekt
  * Saunarium
  *
- * Mateusz Ząbczyk
- * 210040
+ * 
+ * 
  */
 
 #include <iostream>
